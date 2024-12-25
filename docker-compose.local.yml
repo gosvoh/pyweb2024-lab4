@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  gunicorn:
+    container_name: gunicorn
+    build:
+      dockerfile: Gunicorn.Dockerfile
+    ports:
+      - 8082:8082
+
+  nginx:
+    build:
+      dockerfile: Nginx.Dockerfile
+    ports:
+      - 8081:8081
