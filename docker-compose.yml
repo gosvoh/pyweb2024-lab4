@@ -12,10 +12,12 @@ services:
     # ports:
     #   - 8080:80
     networks:
+      - default
       - nginx
     depends_on:
       - gunicorn
 
 networks:
+  default:
   nginx:
     external: true
