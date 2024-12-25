@@ -10,3 +10,9 @@ services:
       dockerfile: Nginx.Dockerfile
     ports:
       - 80:80
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
