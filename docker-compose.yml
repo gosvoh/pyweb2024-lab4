@@ -2,6 +2,7 @@ version: "3"
 
 services:
   gunicorn:
+    container_name: gunicorn
     build:
       dockerfile: Gunicorn.Dockerfile
 
