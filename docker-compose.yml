@@ -5,10 +5,12 @@ services:
     container_name: gunicorn
     build:
       dockerfile: Gunicorn.Dockerfile
+      no_cache: true
 
   nginx:
     build:
       dockerfile: Nginx.Dockerfile
+      no_cache: true
     networks:
       - default
       - nginx
