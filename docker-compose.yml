@@ -9,13 +9,9 @@ services:
   nginx:
     build:
       dockerfile: Nginx.Dockerfile
-    # ports:
-    #   - 8080:80
     networks:
       - default
       - nginx
-    depends_on:
-      - gunicorn
 
 networks:
   default:

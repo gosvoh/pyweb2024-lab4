@@ -7,4 +7,6 @@ RUN pip install gunicorn aiohttp
 
 COPY wsgi.py .
 
-CMD ["gunicorn", "wsgi:app", "--bind", "0.0.0.0:8000", "--worker-class", "aiohttp.GunicornWebWorker"]
+EXPOSE 8082
+
+CMD ["gunicorn", "wsgi:app", "--bind", "0.0.0.0:8082", "--worker-class", "aiohttp.GunicornWebWorker"]
